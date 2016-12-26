@@ -14,7 +14,8 @@ const store = createStore(
 );
 
 store.subscribe(() => {
-    saveState({ book: store.getState().book });
+    saveState(store.getState());
+    console.log('store changed!', store.getState());
 });
 
 ReactDOM.render(
